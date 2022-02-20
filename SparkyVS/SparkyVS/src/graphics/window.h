@@ -1,7 +1,7 @@
 #pragma once
 
 #include <iostream>
-
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 namespace sparky { namespace graphics {
@@ -17,8 +17,11 @@ namespace sparky { namespace graphics {
 	public:
 		Window(const char* name, int width, int height);
 		~Window();
-		void update() const;
+		void update();
 		bool closed() const;
+		void clear() const;
+		int getWidth() const;
+		int getHeight() const;
 
 	private:
 		bool init();
